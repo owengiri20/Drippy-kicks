@@ -1,8 +1,13 @@
 :root {
   --main-black: #2e2e2e;
-  --secondary: #1d1d1d;
+  --dark-black: #000;
   --white: #d6d6d68;
+  --bright-white: #fff;
 }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -13,7 +18,7 @@ body {
   display: flex;
   top: 0;
   justify-content: center;
-  background: #000;
+  background: var(--dark-black);
 }
 
 #navbar ul {
@@ -24,7 +29,7 @@ body {
 }
 
 .logo {
-  color: #fff;
+  color: var(--bright-white);
   margin-right: 1em;
 }
 #navbar li {
@@ -34,4 +39,36 @@ body {
 
 .nav-link {
   text-decoration: none;
+  color: var(--bright-white);
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  background: yellowgreen;
+  justify-content: center;
+}
+section {
+  height: 100vh;
+}
+
+section.main-show {
+  background-color: var(--dark-black) !important;
+  color: var(--bright-white);
+  background: url("images/shoe1.jpg") no-repeat center center/cover;
+  width: 90vw;
+}
+
+section.main-show h1 {
+  position: absolute;
+  bottom: 0;
+  margin-left: 25px;
+}
+section.main-show h1.shoe-pack {
+  position: absolute;
+  bottom: 3.2em;
+}
+
+section.main-show h1.shoe-name {
+  font-size: 3em;
 }
