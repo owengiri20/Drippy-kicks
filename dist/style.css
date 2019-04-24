@@ -11,6 +11,7 @@
 body {
   margin: 0;
   padding: 0;
+  color: var(--bright-white);
 }
 
 /* NAVBAR */
@@ -49,36 +50,42 @@ body {
 
 .main-wrapper {
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-auto-rows: auto;
   background: var(--main-black);
   justify-content: center;
 }
 section {
-  height: 100vh;
+  min-height: 10vh;
+  /* margin-bottom: 10px; */
 }
 
-section.main-show {
+section#main-show {
   background-color: var(--dark-black) !important;
   color: var(--bright-white);
   background: url("images/shoe1.jpg") no-repeat center center/cover;
   width: 90vw;
+  margin-bottom: 1em;
+  height: 100vh;
 }
 
-section.main-show h1 {
+section#main-show h1 {
   position: absolute;
   bottom: 0;
   margin-left: 25px;
 }
-section.main-show h1.shoe-pack {
+section#main-show h1.shoe-pack {
   position: absolute;
   bottom: 3.2em;
 }
 
-section.main-show h1.shoe-name {
+section#main-show h1.shoe-name {
   font-size: 3em;
 }
 
+/* SECONDARY SHOWCASE */
 .showcase-sec {
+  max-height: 50vh !important;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 29vw);
@@ -88,4 +95,21 @@ section.main-show h1.shoe-name {
 .showcase-sec .shoe-tile img {
   width: 100%;
   height: 40vh;
+}
+
+/* HALVES SHOWCASE */
+section.showcase-halves {
+  display: grid;
+  grid-template-columns: repeat(2, 44vw);
+  /* justify-content: flex-start; */
+  grid-column-gap: 1em;
+}
+
+.halve-1 {
+  background: url("images/shoe6.jpg") no-repeat center center/cover;
+  color: red;
+}
+.halve-2 {
+  background: url("images/shoe6.jpg") no-repeat center center/cover;
+  color: red;
 }
