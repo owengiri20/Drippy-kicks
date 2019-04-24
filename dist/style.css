@@ -16,9 +16,13 @@ body {
 /* NAVBAR */
 #navbar {
   display: flex;
+  position: fixed;
+  width: 100vw;
   top: 0;
   justify-content: center;
+  padding: 1em;
   background: var(--dark-black);
+  z-index: 100;
 }
 
 #navbar ul {
@@ -30,6 +34,7 @@ body {
 
 .logo {
   color: var(--bright-white);
+  font-size: 1.3em;
   margin-right: 1em;
 }
 #navbar li {
@@ -45,7 +50,7 @@ body {
 .main-wrapper {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
-  background: yellowgreen;
+  background: var(--main-black);
   justify-content: center;
 }
 section {
@@ -71,4 +76,16 @@ section.main-show h1.shoe-pack {
 
 section.main-show h1.shoe-name {
   font-size: 3em;
+}
+
+.showcase-sec {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 29vw);
+  grid-column-gap: 1em;
+}
+
+.showcase-sec .shoe-tile img {
+  width: 100%;
+  height: 40vh;
 }
