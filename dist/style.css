@@ -216,3 +216,39 @@ section.showcase-trio .shoe-tile .shop-btn {
 }
 
 /* First Footer */
+footer#first-footer {
+  display: flex;
+  background: var(--dark-black);
+}
+
+footer#first-footer .footer-wrapper {
+  display: flex;
+  width: 100%;
+  background: var(--dark-black);
+  justify-content: space-around;
+  /* text-align: center; */
+  padding: 0 !important;
+  margin: 0 5em;
+}
+
+footer#first-footer .footer-wrapper li {
+  list-style: none;
+  padding: 0 !important;
+  line-height: 1.6;
+}
+
+footer#first-footer .footer-wrapper ul {
+  list-style: none;
+  padding: 0 !important;
+}
+
+footer#first-footer .footer-wrapper li a {
+  text-decoration: none;
+  color: var(--bright-white);
+  text-transform: uppercase;
+}
+
+footer#socials {
+  height: 10vh;
+  background: pink;
+}
