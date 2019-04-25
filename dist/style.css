@@ -1,5 +1,5 @@
 :root {
-  --main-black: #2e2e2e;
+  --main-black: #141414;
   --dark-black: #000;
   --white: #d6d6d68;
   --bright-white: #fff;
@@ -123,19 +123,18 @@ section#main-show h1.shoe-name {
 /* HALVES SHOWCASE */
 section.showcase-halves {
   display: grid;
-  grid-template-columns: repeat(2, 45vw);
+  grid-template-columns: repeat(2, auto);
   /* justify-content: flex-start; */
   grid-column-gap: 1em;
   height: 80vh;
+  width: 100%;
 }
 
 .halve-1 {
   background: url("images/shoe6.jpg") no-repeat center center/cover;
-  color: red;
 }
 .halve-2 {
   background: url("images/shoe6.jpg") no-repeat center center/cover;
-  color: red;
 }
 
 /* second Big image */
@@ -144,23 +143,34 @@ section.showcase-halves {
   height: 80vh;
 }
 
-.showcase-img.main-2 h1.shoe-pack {
-  color: red;
+section.showcase-halves h1,
+section.showcase-halves p,
+section.showcase-halves .shop-btn {
   position: relative;
   top: 50vh;
   left: 2vw;
 }
 
+section.showcase-halves .shop-btn {
+  left: 1vw;
+}
+
+.showcase-img.main-2 h1.shoe-pack {
+  position: relative;
+  top: 55vh;
+  left: 10px;
+}
+
 .showcase-img.main-2 h1.shoe-name {
-  color: red;
   position: relative;
   top: 50vh;
-  left: 2vw;
+  left: 10px;
+  font-size: 3em;
 }
 
 .showcase-img.main-2 .shop-btn {
   position: relative;
-  top: 50vh;
+  top: 47vh;
 }
 
 /* SEC HALVES */
@@ -200,21 +210,28 @@ section.showcase-trio {
   display: grid;
   grid-template-columns: repeat(3, 30vw);
   height: 80vh;
+  grid-column-gap: 1em;
+  width: 100%;
 }
 .shoe-tile.men {
-  background: url("images/shoe2.jpg") no-repeat center center/cover;
+  background: url("images/men.jpg") no-repeat center center/cover;
 }
 
 .shoe-tile.women {
-  background: url("images/shoe2.jpg") no-repeat center center/cover;
+  background: url("images/women.jpg") no-repeat center center/cover;
 }
 .shoe-tile.kid {
-  background: url("images/shoe2.jpg") no-repeat center center/cover;
+  background: url("images/kid.jpg") no-repeat center center/cover;
 }
 
 section.showcase-trio .shoe-tile .shop-btn {
   position: relative;
   top: 60vh;
+  left: 40%;
+  width: 7.5em;
+  height: 3em;
+  border: 1px #0000009c solid;
+  text-align: center;
 }
 
 /* First Footer */
