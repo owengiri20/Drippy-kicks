@@ -13,6 +13,7 @@ body {
   padding: 0;
   color: var(--bright-white);
   background: var(--main-black);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* NAVBAR */
@@ -105,6 +106,7 @@ section#main-show h1.shoe-name {
   grid-template-columns: repeat(3, 30vw);
   justify-content: center;
   justify-content: space-between;
+  margin-bottom: 4em;
 }
 
 .showcase-sec .shoe-tile img {
@@ -219,6 +221,7 @@ section.showcase-trio .shoe-tile .shop-btn {
 footer#first-footer {
   display: flex;
   background: var(--dark-black);
+  margin: 0;
 }
 
 footer#first-footer .footer-wrapper {
@@ -249,19 +252,29 @@ footer#first-footer .footer-wrapper li a {
 }
 
 footer#socials {
-  height: 16vh;
-  background: pink;
+  display: flex;
+  height: 15vh;
+  background: var(--dark-black);
+  margin: 0;
 }
 footer#socials .social-wrapper {
   display: flex;
   width: 100%;
+  align-items: center;
   justify-content: space-around;
+  margin: 0 45em;
 }
 
-footer#socials h1 {
+.stay-connected {
+  background: var(--dark-black);
+  margin: 0;
+  padding: 2em 0 0 0;
   text-align: center;
+  display: block !important;
+  border-top: 1px #36363661 solid;
 }
 
 footer#socials .social-wrapper i {
-  font-size: 2em;
+  font-size: 4em;
+  color: var(--bright-white);
 }
