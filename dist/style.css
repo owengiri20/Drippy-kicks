@@ -249,6 +249,19 @@ footer#first-footer .footer-wrapper li a {
 }
 
 footer#socials {
-  height: 10vh;
+  height: 16vh;
   background: pink;
+}
+footer#socials .social-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+footer#socials h1 {
+  text-align: center;
+}
+
+footer#socials .social-wrapper i {
+  font-size: 2em;
 }
