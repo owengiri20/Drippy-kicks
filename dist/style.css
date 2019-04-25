@@ -55,9 +55,20 @@ body {
   background: var(--main-black);
   justify-content: center;
 }
+
+.shop-btn {
+  display: inline-block;
+  color: var(--dark-black);
+  background: var(--bright-white);
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
 section {
   min-height: 10vh;
-  /* margin-bottom: 10px; */
+  margin-bottom: 80px;
 }
 
 section#main-show {
@@ -97,12 +108,19 @@ section#main-show h1.shoe-name {
   height: 40vh;
 }
 
+.shoe-description,
+.gender,
+.price {
+  margin-bottom: 0.3em;
+}
+
 /* HALVES SHOWCASE */
 section.showcase-halves {
   display: grid;
   grid-template-columns: repeat(2, 44vw);
   /* justify-content: flex-start; */
   grid-column-gap: 1em;
+  height: 80vh;
 }
 
 .halve-1 {
@@ -112,4 +130,28 @@ section.showcase-halves {
 .halve-2 {
   background: url("images/shoe6.jpg") no-repeat center center/cover;
   color: red;
+}
+
+/* second Big image */
+.showcase-img.main-2 {
+  background: url(images/shoe7.jpg) no-repeat center center/cover;
+  height: 80vh;
+}
+
+.showcase-img.main-2 h1.shoe-pack {
+  color: red;
+  position: relative;
+  top: 63vh;
+  left: 2vw;
+}
+
+.showcase-img.main-2 h1.shoe-name {
+  color: red;
+  position: relative;
+  top: 60vh;
+  left: 2vw;
+}
+
+.showcase-img.main-2 .shop-btn {
+  color: pink;
 }
