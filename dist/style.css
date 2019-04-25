@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--bright-white);
+  background: var(--main-black);
 }
 
 /* NAVBAR */
@@ -51,9 +52,11 @@ body {
 .main-wrapper {
   display: grid;
   grid-template-rows: repeat(6, auto);
+  grid-template-columns: auto;
   grid-auto-rows: auto;
   background: var(--main-black);
   justify-content: center;
+  margin: 0 1em;
 }
 
 .shop-btn {
@@ -68,14 +71,14 @@ body {
 
 section {
   min-height: 10vh;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 section#main-show {
   background-color: var(--dark-black) !important;
   color: var(--bright-white);
   background: url("images/shoe1.jpg") no-repeat center center/cover;
-  width: 90vw;
+  width: 100%;
   margin-bottom: 1em;
   height: 100vh;
 }
@@ -98,9 +101,10 @@ section#main-show h1.shoe-name {
 .showcase-sec {
   max-height: 50vh !important;
   display: grid;
+  /* display: flex; */
+  grid-template-columns: repeat(3, 30vw);
   justify-content: center;
-  grid-template-columns: repeat(3, 29vw);
-  grid-column-gap: 1em;
+  justify-content: space-between;
 }
 
 .showcase-sec .shoe-tile img {
@@ -117,7 +121,7 @@ section#main-show h1.shoe-name {
 /* HALVES SHOWCASE */
 section.showcase-halves {
   display: grid;
-  grid-template-columns: repeat(2, 44vw);
+  grid-template-columns: repeat(2, 45vw);
   /* justify-content: flex-start; */
   grid-column-gap: 1em;
   height: 80vh;
@@ -141,17 +145,74 @@ section.showcase-halves {
 .showcase-img.main-2 h1.shoe-pack {
   color: red;
   position: relative;
-  top: 63vh;
+  top: 50vh;
   left: 2vw;
 }
 
 .showcase-img.main-2 h1.shoe-name {
   color: red;
   position: relative;
-  top: 60vh;
+  top: 50vh;
   left: 2vw;
 }
 
 .showcase-img.main-2 .shop-btn {
-  color: pink;
+  position: relative;
+  top: 50vh;
 }
+
+/* SEC HALVES */
+.halve-sec-1 {
+  background: url("images/shoe3.jpg") no-repeat center center/cover;
+}
+.halve-sec-2 {
+  background: url("images/shoe2.jpg") no-repeat center center/cover;
+}
+
+.halve-sec-1 h1 {
+  position: relative;
+  top: 50vh;
+  left: 2vw;
+}
+
+.halve-sec-1 .shop-btn {
+  position: relative;
+  top: 50vh;
+  left: 2vw;
+}
+
+.halve-sec-2 h1 {
+  position: relative;
+  top: 50vh;
+  left: 2vw;
+}
+
+.halve-sec-2 .shop-btn {
+  position: relative;
+  top: 50vh;
+  left: 2vw;
+}
+
+/* Trio Showcase */
+section.showcase-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 30vw);
+  height: 80vh;
+}
+.shoe-tile.men {
+  background: url("images/shoe2.jpg") no-repeat center center/cover;
+}
+
+.shoe-tile.women {
+  background: url("images/shoe2.jpg") no-repeat center center/cover;
+}
+.shoe-tile.kid {
+  background: url("images/shoe2.jpg") no-repeat center center/cover;
+}
+
+section.showcase-trio .shoe-tile .shop-btn {
+  position: relative;
+  top: 60vh;
+}
+
+/* First Footer */
