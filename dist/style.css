@@ -138,7 +138,7 @@ section#main-show h1.shoe-name {
 }
 
 .showcase-sec .shoe-tile img {
-  min-width: 100%;
+  width: 100%;
   height: 40vh;
 }
 
@@ -185,20 +185,20 @@ section.showcase-halves .shop-btn {
 
 .showcase-img.main-2 h1.shoe-pack {
   position: relative;
-  top: 55vh;
+  top: 42%;
   left: 10px;
 }
 
 .showcase-img.main-2 h1.shoe-name {
   position: relative;
-  top: 50vh;
+  top: 36%;
   left: 10px;
   font-size: 3em;
 }
 
 .showcase-img.main-2 .shop-btn {
   position: relative;
-  top: 47vh;
+  top: 23vh;
 }
 
 /* SEC HALVES */
@@ -316,37 +316,6 @@ footer#socials .social-wrapper i {
 }
 
 /* MEDIA QURIES */
-
-/* Half Way */
-@media only screen and (max-width: 1024px) {
-  body {
-    color: red;
-  }
-
-  section.showcase-halves {
-    display: grid;
-    /* flex-direction: column; */
-    grid-template-columns: auto;
-    grid-auto-rows: minmax(600px, auto);
-    /* justify-content: flex-start; */
-    grid-row-gap: 1em;
-    height: auto;
-    /* width: 100%; */
-  }
-
-  section.showcase-halves h1,
-  section.showcase-halves p,
-  section.showcase-halves .shop-btn {
-    position: relative;
-    top: 60vh;
-    /* left: 2vw; */
-  }
-
-  footer#socials .social-wrapper {
-    margin: 0 10em;
-  }
-}
-
 @media only screen and (max-width: 1450px) {
   body {
     color: blue;
@@ -356,16 +325,28 @@ footer#socials .social-wrapper i {
   }
 }
 
+/* Halfway */
 @media only screen and (max-width: 800px) {
   body {
     color: yellow;
   }
+  section.showcase-halves {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(600px, auto);
+    height: 100%;
+    grid-row-gap: 1em;
+    margin-bottom: 1em !important;
+  }
+  section.showcase-halves div {
+    margin-bottom: 1em !important;
+  }
+
   footer#socials .social-wrapper {
     margin: 0 10em;
   }
   footer#first-footer {
     display: flex;
-    /* flex-direction: row; */
     background: var(--dark-black);
     margin: 0;
     padding: 2em 0;
@@ -389,48 +370,39 @@ footer#socials .social-wrapper i {
   }
 }
 
-@media only screen and (max-width: 900px) {
-  body {
-    color: #00ffee;
-  }
-  footer#socials .social-wrapper {
-    margin: 0 5em;
-  }
-  footer#socials .social-wrapper i {
-    font-size: 2em;
-  }
-  footer#first-footer {
-    display: flex;
-    /* flex-direction: row; */
-    background: var(--dark-black);
-    margin: 0;
-    padding: 2em 0;
-    border-top: #98989884 1px solid;
-  }
-  footer#first-footer .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: var(--dark-black);
-    justify-content: center;
-    text-align: center;
-    padding: 0 !important;
-    margin: 0 5em;
-  }
-
-  section.showcase-trio .shoe-tile a.shop-btn {
-    position: relative;
-    left: 25% !important;
-    width: auto;
-    font-size: 0.8em;
-    color: red;
-  }
-}
-
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 500px) {
   body {
     color: #752b3b;
   }
+  #main-show h1.shoe-pack,
+  #main-show h1.shoe-name {
+    position: absolute;
+    /* color: #00ff99 !important; */
+    font-size: 1.6em !important;
+  }
+  #main-show h1.shoe-pack {
+    position: relative;
+    top: 83%;
+  }
+
+  .showcase-sec {
+    font-size: 0.7em;
+    overflow-x: auto;
+  }
+
+  .showcase-sec .shoe-tile {
+    color: #fff;
+    margin-left: 20px;
+    /*  [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ */
+  }
+
+  .showcase-halves div h1,
+  .showcase-halves div p,
+  .showcase-halves div .shop-btn {
+    color: #00ff99;
+    margin-left: 20px;
+  }
+
   footer#socials .social-wrapper {
     margin: 0 5em;
   }
@@ -439,29 +411,16 @@ footer#socials .social-wrapper i {
   }
   footer#first-footer {
     display: flex;
-    /* flex-direction: row; */
     background: var(--dark-black);
     margin: 0;
     padding: 2em 0;
     border-top: #98989884 1px solid;
   }
-
-  /* footer#first-footer .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: var(--dark-black);
-    justify-content: center;
-    text-align: center;
-    padding: 0 !important;
-    margin: 0 5em;
-  } */
 
   section.showcase-trio .shoe-tile a.shop-btn {
     position: relative;
     left: 10% !important;
     width: auto;
     font-size: 0.6em;
-    /* color: red; */
   }
 }
