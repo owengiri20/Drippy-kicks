@@ -399,7 +399,12 @@ footer#socials .social-wrapper i {
   .showcase-halves div h1,
   .showcase-halves div p,
   .showcase-halves div .shop-btn {
-    color: #00ff99;
+    /* color: var(--bright-white); */
+    margin-left: 20px;
+  }
+
+  section.main-2 h1,
+  section.main-2 .shop-btn {
     margin-left: 20px;
   }
 
