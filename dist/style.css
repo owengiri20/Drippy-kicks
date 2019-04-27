@@ -317,9 +317,9 @@ footer#socials .social-wrapper i {
 
 /* MEDIA QURIES */
 @media only screen and (max-width: 1450px) {
-  body {
+  /* body {
     color: blue;
-  }
+  } */
   footer#socials .social-wrapper {
     margin: 0 10em;
   }
@@ -327,9 +327,9 @@ footer#socials .social-wrapper i {
 
 /* Halfway */
 @media only screen and (max-width: 800px) {
-  body {
+  /* body {
     color: yellow;
-  }
+  } */
   section.showcase-halves {
     display: grid;
     grid-template-columns: 1fr;
@@ -371,9 +371,9 @@ footer#socials .social-wrapper i {
 }
 
 @media only screen and (max-width: 500px) {
-  body {
+  /* body {
     color: #752b3b;
-  }
+  } */
   #main-show h1.shoe-pack,
   #main-show h1.shoe-name {
     position: absolute;
@@ -391,15 +391,12 @@ footer#socials .social-wrapper i {
   }
 
   .showcase-sec .shoe-tile {
-    color: #fff;
     margin-left: 20px;
-    /*  [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ */
   }
 
   .showcase-halves div h1,
   .showcase-halves div p,
   .showcase-halves div .shop-btn {
-    /* color: var(--bright-white); */
     margin-left: 20px;
   }
 
@@ -428,4 +425,14 @@ footer#socials .social-wrapper i {
     width: auto;
     font-size: 0.6em;
   }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 4px;
+  background: #8c8c8c18; /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff99;
 }
