@@ -84,35 +84,62 @@ body {
   text-decoration: none;
 }
 
+a {
+  text-transform: capitalize !important;
+}
+
+.shop-btn:hover {
+  color: var(--bright-white);
+  background: var(--dark-black);
+}
+
 section {
   min-height: 10vh;
   margin-bottom: 20px;
 }
 
 section#main-show {
-  background-color: var(--dark-black) !important;
-  color: var(--bright-white);
   background: url("images/shoe8.jpg") no-repeat center center/cover;
   width: 100%;
-  margin-bottom: 1em;
   height: 100vh;
 }
 
-section#main-show h1 {
+/* section#main-show h1 {
   position: absolute;
   bottom: 0;
   margin-left: 25px;
-  color: var(--dark-black) !important;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Bangers", cursive;
 }
 section#main-show h1.shoe-pack {
   position: absolute;
-  bottom: 3.2em;
-  font-family: "Permanent Marker", cursive;
+  bottom: 2.5em;
+  font-family: "Bangers", cursive;
 }
 
 section#main-show h1.shoe-name {
+  font-size: 2.7em;
+} */
+
+.main-shoe {
+  position: absolute;
+  top: 80%;
+  margin: 0 0 0 15px !important;
+  font-family: "Bangers", cursive;
+  /* width: 30%; */
+}
+
+.main-shoe h1 {
   font-size: 3em;
+  padding: 0.3em;
+  margin: 0;
+  background: var(--main-green);
+  color: var(--main-black);
+  letter-spacing: 3px;
+}
+
+#earth-pack {
+  font-family: "Lato", sans-serif !important;
+  font-size: 1.3em;
 }
 
 /* SECONDARY SHOWCASE */
@@ -220,7 +247,7 @@ section.showcase-halves .shop-btn {
 /* Trio Showcase */
 section.showcase-trio {
   display: grid;
-  grid-template-columns: repeat(3, 30vw);
+  grid-template-columns: repeat(3, auto);
   height: 80vh;
   grid-column-gap: 1em;
   width: 100%;
@@ -378,7 +405,7 @@ footer#socials .social-wrapper i {
   #main-show h1.shoe-name {
     position: absolute;
     /* color: #00ff99 !important; */
-    font-size: 1.6em !important;
+    font-size: 1.3em !important;
   }
   #main-show h1.shoe-pack {
     position: relative;
@@ -425,14 +452,32 @@ footer#socials .social-wrapper i {
     width: auto;
     font-size: 0.6em;
   }
+
+  /* section#main-show h1 {
+    position: absolute;
+    top: 88vh;
+    margin-left: 25px;
+    padding: 0;
+  }
+  section#main-show h1.shoe-pack {
+    position: absolute;
+    bottom: 0em;
+    padding: 0;
+  } */
 }
 
 ::-webkit-scrollbar {
   width: 12px;
-  height: 4px;
-  background: #8c8c8c18; /* Optional: just make scrollbar invisible */
+  height: 8px;
+  background: #000; /* Optional: just make scrollbar invisible */
 }
 
 ::-webkit-scrollbar-thumb {
+  background: #00ff996a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 19px;
   background: #00ff99;
+  padding: 4em;
 }
