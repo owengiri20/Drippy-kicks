@@ -17,51 +17,9 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-/* NAVBAR */
-/* #navbar {
-  display: flex;
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  justify-content: center;
-  padding: 0.7em;
-  min-height: 10vh;
-  background: var(--dark-black);
-  z-index: 100;
-  border-bottom: #03ba6164 solid 2px;
-  text-transform: uppercase;
+a {
+  cursor: pointer !important;
 }
-
-#navbar ul {
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  color: var(--bright-white);
-  font-size: 1.2em;
-  margin-right: 1em;
-  color: var(--main-green);
-  font-family: "Nosifer", cursive !important;
-  transition: ease-in 2s;
-  position: relative;
-  top: 2px;
-}
-#navbar li {
-  list-style: none;
-  margin-right: 1em;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--bright-white);
-}
-
-.nav-link:hover {
-  color: var(--main-green);
-} */
 
 /* NAVBAR */
 /* header wraps around the whole navbar */
@@ -71,6 +29,12 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1000;
+}
+
+.logo {
+  font-family: "Nosifer", cursive !important;
+  color: var(--main-green);
+  text-align: center;
 }
 
 nav {
@@ -92,13 +56,15 @@ nav ul {
 }
 
 nav li {
-  margin: 0 0 1em 1em;
+  margin: 0.3em;
+  padding-bottom: 0.5em;
+  border-bottom: #ffffff11 1px solid;
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 0.9em;
   text-transform: uppercase;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -538,28 +504,76 @@ footer#socials .social-wrapper i {
     width: auto;
     font-size: 0.6em;
   }
-
-  /* section#main-show h1 {
-    position: absolute;
-    top: 88vh;
-    margin-left: 25px;
-    padding: 0;
-  }
-  section#main-show h1.shoe-pack {
-    position: absolute;
-    bottom: 0em;
-    padding: 0;
-  } */
 }
 
+/* Deskotop nav */
+@media screen and (min-width: 778px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, auto) 1fr;
+  }
+
+  .logo {
+    grid-column: 2;
+    color: var(--main-green);
+  }
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-bottom: 0;
+    margin-left: 2em;
+  }
+  nav {
+    all: unset;
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    all: unset;
+    color: var(--bright-white);
+    position: relative;
+    display: flex;
+  }
+
+  .nav-toggle-label span {
+    display: none;
+  }
+
+  nav a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    background: var(--main-green);
+    top: -0.5em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 0.3s;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+    transition: transform ease-in-out 0.3s;
+  }
+}
+
+/* SCROLL BAR */
 ::-webkit-scrollbar {
   width: 12px;
-  height: 8px;
+  height: 15px;
   background: #000; /* Optional: just make scrollbar invisible */
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #00ff996a;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
