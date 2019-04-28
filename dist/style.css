@@ -18,7 +18,7 @@ body {
 }
 
 /* NAVBAR */
-#navbar {
+/* #navbar {
   display: flex;
   position: fixed;
   width: 100vw;
@@ -61,9 +61,113 @@ body {
 
 .nav-link:hover {
   color: var(--main-green);
+} */
+
+/* NAVBAR */
+/* header wraps around the whole navbar */
+header {
+  background: var(--dark-black);
+  text-align: center !important;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
+
+nav {
+  background: var(--dark-black);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  /* display: none; */
+  transform: scale(1, 0);
+  transition: ease-in-out 0.5s;
+  transform-origin: top;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 0 1em 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #7a7a7a;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+  transition: ease-in-out 0.5s;
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out 0.35s;
+}
+
+/* check box */
+#nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label span {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  align-items: center;
+  height: 100%;
+  margin-left: 30px;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  position: relative;
+  width: 1.7em;
+  height: 4px;
+  background: var(--bright-white);
+}
+.nav-toggle-label span::after,
+.nav-toggle-label span::before {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+  height: 4.4px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
 .main-wrapper {
-  /* width: 100%; */
   display: grid;
   grid-template-rows: repeat(6, auto);
   grid-template-columns: auto;
@@ -104,35 +208,18 @@ section#main-show {
   height: 100vh;
 }
 
-/* section#main-show h1 {
-  position: absolute;
-  bottom: 0;
-  margin-left: 25px;
-  font-family: "Bangers", cursive;
-}
-section#main-show h1.shoe-pack {
-  position: absolute;
-  bottom: 2.5em;
-  font-family: "Bangers", cursive;
-}
-
-section#main-show h1.shoe-name {
-  font-size: 2.7em;
-} */
-
 .main-shoe {
   position: absolute;
   top: 80%;
   margin: 0 0 0 15px !important;
   font-family: "Bangers", cursive;
-  /* width: 30%; */
 }
 
 .main-shoe h1 {
   font-size: 3em;
   padding: 0.3em;
   margin: 0;
-  background: var(--main-green);
+  background: #ffffff3d;
   color: var(--main-black);
   letter-spacing: 3px;
 }
@@ -146,7 +233,6 @@ section#main-show h1.shoe-name {
 .showcase-sec {
   max-height: 70vh !important;
   display: grid;
-  /* display: flex; */
   grid-template-columns: repeat(3, auto);
   justify-content: center;
   justify-content: space-between;
